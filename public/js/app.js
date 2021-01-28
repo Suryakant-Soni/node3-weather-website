@@ -1,6 +1,6 @@
 
 
-//get the form element from HTML DOM
+//get the form element from HTML-DOM
 const weatherForm = document.querySelector('form');
 // get the input element
 const place = document.querySelector('input');
