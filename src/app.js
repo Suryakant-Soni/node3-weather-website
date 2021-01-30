@@ -14,6 +14,9 @@ app.set('view engine', 'hbs');
 app.set('views', viewsPath);
 hbs.registerPartials(partialsPath);
 
+//getting port number set dynamically
+const port = process.env.PORT || 3000 ;
+
 //Setup directory to serve static files
 app.use(express.static(publicDirectoryPath));
 
@@ -95,6 +98,6 @@ res.render('404page',{
     pageName : 'Clueless'
 });
 });
-app.listen(3000, () => {
-    console.log('Server is running up on port 3000.');
+app.listen(port, () => {
+    console.log('Server is running up on port ' + port);
 });

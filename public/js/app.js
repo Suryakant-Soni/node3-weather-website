@@ -15,7 +15,7 @@ weatherForm.addEventListener('submit', (event) => {
     event.preventDefault();
     // use fetch api to get details
     const place_name = place.value;
-    const dynamicAddress = 'http://localhost:3000/weather?address=' + place_name ;
+    const dynamicAddress = '/weather?address=' + place_name ;
     console.log(dynamicAddress);
     fetch(dynamicAddress).then((response) => {
         response.json().then((data) => {
