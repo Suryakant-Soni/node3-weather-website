@@ -68,7 +68,10 @@ oWeather.geocode( address, (error, { latitude, longitude, place_name } = {} ) =>
             observation_time: data.observation_time,
             temperature: data.temperature,
             humidity: data.humidity,
-
+            wind_speed : data.wind_speed,
+            wind_dir : data.wind_dir,
+            wind_degree : data.wind_degree,
+            feelslike : data.feelslike
         });
 
         } else if (error){     

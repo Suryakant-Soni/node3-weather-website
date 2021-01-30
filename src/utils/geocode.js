@@ -32,7 +32,11 @@ const forecast = (latitude, longitude, place_name, callback) => {
                 temperature: body.current.temperature,
                 humidity: body.current.humidity,
                 location: place_name,
-                weather : body.current.weather_descriptions
+                weather : body.current.weather_descriptions,
+                wind_speed : body.current.wind_speed,
+                wind_dir : body.current.wind_dir,
+                wind_degree : body.current.wind_degree,
+                feelslike : body.current.feelslike
             });        }
     })
 }

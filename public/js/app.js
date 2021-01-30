@@ -22,9 +22,12 @@ weatherForm.addEventListener('submit', (event) => {
             if (data.error) {
                 para1.textContent = data.error; 
             } else {
+                console.log('New data is - ' + data);
                 // para2.textContent = JSON.stringify(data);
-                para1.textContent = 'Locations is - ' + data.location;
-                para2.textContent  = 'Weather details - ' + data.forecast;
+                para1.textContent = 'At the Location ' + data.location  + ' on time ' + data.observation_time
+                + ' the temprature is ' + data.temperature + ' and humidity is ' + data.humidity + '.' 
+                para2.textContent  = ' Weather is ' + data.forecast + ' and Wind is blowing at the speed of ' +
+                data.wind_speed + ' in direction ' + data.wind_dir + ' at the degree of ' + data.wind_degree;
             }
             console.log(data);
         });
